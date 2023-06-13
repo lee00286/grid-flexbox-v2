@@ -44,15 +44,95 @@ section h2 {
     font-size: 2.5rem;
 }
 
+.one {
+    background-color: var(--color7);
+}
+
+.two {
+    background-color: var(--color2);
+}
+
+.three {
+    background-color: var(--color6);
+}
+
+.four {
+    background-color: var(--color8);
+}
+
+.five {
+    background-color: var(--color4);
+}
+
+.six {
+    background-color: var(--color3);
+}
+
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+}
+
+li {
+    margin-bottom: 2%;
+    padding: 0.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5rem;
+}
+
+figure {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: white;
+    opacity: 0.7;
+}
+
+figcaption a {
+    color: black;
+    text-decoration: none;
+}
 
 /* At this breakpoint, transition to 2 figures per line */
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        gap: 2%;
+    }
+
+    li {
+        flex-basis: 49%;
+    }
+}
 
 
 /* At this breakpoint, transition to 3 figures per line */
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+    li {
+        flex-basis: 32%;
+    }
+}
