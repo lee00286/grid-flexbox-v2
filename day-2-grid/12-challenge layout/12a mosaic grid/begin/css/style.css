@@ -78,6 +78,29 @@ figcaption a:hover {
     color: var(--color8);
 }
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    #popart ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .colspan2 {
+        grid-column: span 2;
+    }
+
+    .colspan3 {
+        grid-column: span 3;
+    }
+
+    .rowspan2 {
+        grid-row: span 2;
+    }
+
+    /* Figures don't always fill their LI container */
+    figure {
+        height: 100%;
+    }
+}
 
 @media (min-width: 800px) {}
